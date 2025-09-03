@@ -1,0 +1,146 @@
+.videos-header {
+  padding: 3rem 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(152, 251, 152, 0.05),
+    rgba(221, 160, 221, 0.05)
+  );
+}
+
+.videos-header h1 {
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.videos-header p {
+  color: var(--medium-gray);
+}
+
+.videos-filters {
+  padding: 2rem 0;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--primary-white);
+  border: 2px solid var(--light-gray);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, var(--iridescent-3), var(--iridescent-4));
+  border-color: transparent;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--iridescent-2), var(--iridescent-3));
+  border-color: transparent;
+}
+
+.videos-grid {
+  padding: 3rem 0;
+}
+
+.videos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.video-card {
+  background: var(--primary-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--light-gray);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--off-white);
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+}
+
+.video-info {
+  padding: 1rem;
+}
+
+.video-info h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.video-info p {
+  color: var(--medium-gray);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.video-date {
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.play-btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--iridescent-2), var(--iridescent-3));
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background: linear-gradient(135deg, var(--iridescent-3), var(--iridescent-4));
+}
+
+.no-videos {
+  text-align: center;
+  padding: 3rem;
+  color: var(--medium-gray);
+}
+
+@media (max-width: 768px) {
+  .videos-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cv-jrl",
+    "title": "John R. Lawson - Curriculum Vitae",
+    "description": "Complete academic CV including publications, presentations, and research experience",
+    "filename": "jrl-cv-2024.pdf",
+    "category": "personal",
+    "date": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "tech-report-inversions",
+    "title": "Technical Report: Uinta Basin Winter Inversions 2023-2024",
+    "description": "Comprehensive analysis of temperature inversion patterns and air quality impacts during the 2023-2024 winter season",
+    "filename": "inversions-tech-report-2024.pdf",
+    "category": "research",
+    "date": "2024-02-15T00:00:00Z"
+  },
+  {
+    "id": "station-network-guide",
+    "title": "Weather Station Network User Guide",
+    "description": "Documentation for accessing and interpreting data from our atmospheric monitoring network",
+    "filename": "station-network-guide.pdf",
+    "category": "technical",
+    "date": "2024-01-20T00:00:00Z"
+  },
+  {
+    "id": "public-summary-2023",
+    "title": "2023 Research Summary for Stakeholders",
+    "description": "Plain-language summary of our research findings and community impacts from 2023",
+    "filename": "public-summary-2023.pdf",
+    "category": "outreach",
+    "date": "2024-01-10T00:00:00Z"
+  },
+  {
+    "id": "forecast-verification",
+    "title": "Forecast Verification Statistics 2023",
+    "description": "Statistical analysis of weather forecast accuracy for the Uinta Basin region",
+    "filename": "forecast-stats-2023.pdf",
+    "category": "research",
+    "date": "2024-01-05T00:00:00Z"
+  }
+]

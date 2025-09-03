@@ -1,0 +1,148 @@
+<%- include('../partials/header') %>
+
+<section class="resources-header">
+    <div class="container">
+        <h1>Resources & Publications</h1>
+        <p>Explore research publications and download academic resources</p>
+    </div>
+</section>
+
+<section class="publications-section">
+    <div class="container">
+        <% teamMembers.forEach((member, index) => { %>
+            <div class="member-publications-wrapper">
+                <button class="publications-toggle <%= index === 0 ? 'active' : '' %>" 
+                        data-member="<%= member.slug %>"
+                        aria-expanded="<%= index === 0 ? 'true' : 'false' %>"
+                        aria-controls="publications-<%= member.slug %>">
+                    <div class="toggle-header">
+                        <h2>Publications - <%= member.name %></h2>
+                        <span class="toggle-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <p class="toggle-subtitle">Click to <%= index === 0 ? 'collapse' : 'expand' %> publications</p>
+                </button>
+                
+                <div class="publications-content <%= index === 0 ? 'expanded' : '' %>" 
+                     id="publications-<%= member.slug %>">
+                    <% if (member.publications) { %>
+                        <div class="publications-grid">
+                            <% if (member.publications.recent && member.publications.recent.length > 0) { %>
+                                <div class="publication-category">
+                                    <h3>Recent Publications</h3>
+                                    <ul class="publication-list">
+                                        <% member.publications.recent.forEach(pub => { %>
+                                            <li class="publication-item">
+                                                <% if (pub.doi) { %>
+                                                    <a href="<%= pub.doi %>" target="_blank" rel="noopener noreferrer" class="publication-title">
+                                                        <%= pub.title %>
+                                                    </a>
+                                                <% } else { %>
+                                                    <span class="publication-title"><%= pub.title %></span>
+                                                <% } %>
+                                                <div class="publication-meta">
+                                                    <% if (pub.authors) { %>
+                                                        <span class="authors"><%= pub.authors %></span>
+                                                    <% } %>
+                                                    <% if (pub.journal) { %>
+                                                        <span class="journal"><%= pub.journal %></span>
+                                                    <% } %>
+                                                    <% if (pub.year) { %>
+                                                        <span class="year">(<%= pub.year %>)</span>
+                                                    <% } %>
+                                                </div>
+                                                <% if (pub.description) { %>
+                                                    <p class="publication-description"><%= pub.description %></p>
+                                                <% } %>
+                                            </li>
+                                        <% }) %>
+                                    </ul>
+                                </div>
+                            <% } %>
+                            
+                            <% if (member.publications.featured && member.publications.featured.length > 0) { %>
+                                <div class="publication-category">
+                                    <h3>Featured Publications</h3>
+                                    <ul class="publication-list">
+                                        <% member.publications.featured.forEach(pub => { %>
+                                            <li class="publication-item featured">
+                                                <% if (pub.doi) { %>
+                                                    <a href="<%= pub.doi %>" target="_blank" rel="noopener noreferrer" class="publication-title">
+                                                        <%= pub.title %>
+                                                    </a>
+                                                <% } else { %>
+                                                    <span class="publication-title"><%= pub.title %></span>
+                                                <% } %>
+                                                <div class="publication-meta">
+                                                    <% if (pub.authors) { %>
+                                                        <span class="authors"><%= pub.authors %></span>
+                                                    <% } %>
+                                                    <% if (pub.journal) { %>
+                                                        <span class="journal"><%= pub.journal %></span>
+                                                    <% } %>
+                                                    <% if (pub.year) { %>
+                                                        <span class="year">(<%= pub.year %>)</span>
+                                                    <% } %>
+                                                </div>
+                                                <% if (pub.description) { %>
+                                                    <p class="publication-description"><%= pub.description %></p>
+                                                <% } %>
+                                            </li>
+                                        <% }) %>
+                                    </ul>
+                                </div>
+                            <% } %>
+                        </div>
+                        
+                        <% if (member.scholarUrl) { %>
+                            <div class="publications-footer">
+                                <a href="<%= member.scholarUrl %>" target="_blank" rel="noopener noreferrer" class="scholar-link">
+                                    View all publications on Google Scholar →
+                                </a>
+                            </div>
+                        <% } %>
+                    <% } else { %>
+                        <div class="no-publications">
+                            <p>Publications data is being updated. Please check back soon.</p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<section class="resources-list">
+    <div class="container">
+        <h2>Downloadable Resources</h2>
+        <% if (pdfs.length === 0) { %>
+            <div class="no-resources">
+                <p>Resources will be available soon.</p>
+            </div>
+        <% } else { %>
+            <div class="pdf-grid compact">
+                <% pdfs.forEach(pdf => { %>
+                    <div class="pdf-card compact">
+                        <div class="pdf-icon">📄</div>
+                        <div class="pdf-info">
+                            <h3><%= pdf.title %></h3>
+                            <p><%= pdf.description %></p>
+                            <span class="pdf-meta">
+                                <%= pdf.category %> | <%= new Date(pdf.date).toLocaleDateString() %>
+                            </span>
+                        </div>
+                        <a href="/pdfs/download/<%= pdf.filename %>" class="download-btn compact">
+                            Download
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<script src="/js/publications.js"></script>
+<%- include('../partials/footer') %>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "inversion-explained",
+    "title": "Temperature Inversions Explained",
+    "description": "A 3-minute visual explanation of how temperature inversions form and affect air quality in valleys",
+    "thumbnail": "/images/video-thumb-inversion.jpg",
+    "url": "https://example.com/videos/inversion-explained.mp4",
+    "category": "educational",
+    "duration": "3:24",
+    "date": "2024-01-15T00:00:00Z"
+  },
+  {
+    "id": "field-work-2024",
+    "title": "Field Work Compilation 2024",
+    "description": "Highlights from our team's field campaigns including station installations and balloon launches",
+    "thumbnail": "/images/video-thumb-field.jpg",
+    "url": "https://example.com/videos/field-work-2024.mp4",
+    "category": "research",
+    "duration": "5:47",
+    "date": "2024-02-01T00:00:00Z"
+  },
+  {
+    "id": "cloud-types-timelapse",
+    "title": "Cloud Types in Time-lapse",
+    "description": "Beautiful time-lapse footage showing different cloud formations over the Uinta Mountains",
+    "thumbnail": "/images/video-thumb-clouds.jpg",
+    "url": "https://example.com/videos/cloud-timelapse.mp4",
+    "category": "educational",
+    "duration": "2:15",
+    "date": "2024-01-20T00:00:00Z"
+  },
+  {
+    "id": "weather-balloon-launch",
+    "title": "Weather Balloon Launch Tutorial",
+    "description": "Step-by-step guide to launching weather balloons for atmospheric profiling",
+    "thumbnail": "/images/video-thumb-balloon.jpg",
+    "url": "https://example.com/videos/balloon-launch.mp4",
+    "category": "educational",
+    "duration": "8:32",
+    "date": "2024-01-10T00:00:00Z"
+  },
+  {
+    "id": "community-workshop-2024",
+    "title": "Community Weather Workshop",
+    "description": "Recording of our public workshop on understanding and predicting local weather patterns",
+    "thumbnail": "/images/video-thumb-workshop.jpg",
+    "url": "https://example.com/videos/workshop-2024.mp4",
+    "category": "longform",
+    "duration": "45:23",
+    "date": "2024-01-05T00:00:00Z"
+  }
+]

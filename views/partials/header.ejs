@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lawson Group: research in air quality, weather, and AI.">
+    <title>Lawson Group</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiMyZDUwMTYiLz4KICA8dGV4dCB4PSIxNiIgeT0iMjMiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MPC90ZXh0Pgo8L3N2Zz4K">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/iridescent.css">
+    <link rel="stylesheet" href="/css/<%= page %>.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600&family=Source+Serif+Pro:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="/" class="logo">
+                    <span class="logo-text">JRL</span>
+                    <span class="logo-subtitle">academic</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/blog" class="nav-link <%= page === 'blog' ? 'active' : '' %>">Blog</a>
+                <a href="/team" class="nav-link <%= page === 'team' ? 'active' : '' %>">Team</a>
+                <a href="/videos" class="nav-link <%= page === 'videos' ? 'active' : '' %>">Videos</a>
+                <a href="/pdfs" class="nav-link <%= page === 'resources' ? 'active' : '' %>">Resources</a>
+                <a href="https://www.usu.edu/binghamresearch/" class="nav-link" target="_blank" rel="noopener">Bingham Research</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-text">Dark mode</span>
+                </button>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main class="main-content">

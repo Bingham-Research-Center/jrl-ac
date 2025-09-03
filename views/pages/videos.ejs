@@ -1,0 +1,52 @@
+<%- include('../partials/header') %>
+
+<section class="videos-header">
+    <div class="container">
+        <h1>Video Repository</h1>
+        <p>Educational content and research visualizations</p>
+    </div>
+</section>
+
+<section class="videos-filters">
+    <div class="container">
+        <div class="filter-buttons">
+            <% categories.forEach(category => { %>
+                <a href="/videos?category=<%= category %>" 
+                   class="filter-btn <%= selectedCategory === category ? 'active' : '' %>">
+                    <%= category.charAt(0).toUpperCase() + category.slice(1) %>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<section class="videos-grid">
+    <div class="container">
+        <% const filteredVideos = selectedCategory === 'all' ? videos : videos.filter(v => v.category === selectedCategory); %>
+        <% if (filteredVideos.length === 0) { %>
+            <div class="no-videos">
+                <p>No videos available in this category.</p>
+            </div>
+        <% } else { %>
+            <div class="videos-list">
+                <% filteredVideos.forEach(video => { %>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="<%= video.thumbnail %>" alt="<%= video.title %>" 
+                                 onerror="this.src='/images/video-placeholder.jpg'">
+                            <span class="video-duration"><%= video.duration %></span>
+                        </div>
+                        <div class="video-info">
+                            <h3><%= video.title %></h3>
+                            <p><%= video.description %></p>
+                            <span class="video-date"><%= new Date(video.date).toLocaleDateString() %></span>
+                        </div>
+                        <a href="<%= video.url %>" class="play-btn" target="_blank">Watch Video</a>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

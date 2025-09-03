@@ -1,0 +1,78 @@
+<%- include('../partials/header') %>
+
+<section class="blog-header">
+    <div class="container">
+        <h1>Spotlights & Research Updates</h1>
+        <p>Plain-language summaries of our work and recent weather events</p>
+    </div>
+</section>
+
+<section class="blog-filters">
+    <div class="container">
+        <div class="filter-tags">
+            <% tags.forEach(tag => { %>
+                <a href="/blog?tag=<%= tag %>" 
+                   class="filter-tag filter-<%= tag.toLowerCase() %> <%= selectedTag === tag ? 'active' : '' %>">
+                    <%= tag %>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<section class="blog-posts">
+    <div class="container">
+        <% if (posts.length === 0) { %>
+            <div class="no-posts">
+                <p>No spotlights found. Check back soon for updates!</p>
+            </div>
+        <% } else { %>
+            <div class="posts-list">
+                <% posts.forEach((post, index) => { %>
+                    <article class="post-card <%= index === 0 ? 'expanded' : 'collapsed' %>">
+                        <div class="post-header">
+                            <h2><%= post.title %></h2>
+                            <p class="post-meta">
+                                <span class="author"><%= post.author %></span>
+                                <span class="date"><%= post.date.toLocaleDateString() %></span>
+                                <span class="tag tag-<%= post.tag.toLowerCase() %>"><%= post.tag %></span>
+                            </p>
+                        </div>
+                        <% if (index === 0) { %>
+                            <div class="post-content">
+                                <% if (post.firstImage) { %>
+                                    <img src="<%= post.firstImage %>" alt="Post image" class="post-image">
+                                <% } %>
+                                <div class="post-preview">
+                                    <%= post.preview %>...
+                                </div>
+                                <a href="/blog/post/<%= post.fileName.replace('.md', '') %>" class="read-more">
+                                    Read full article →
+                                </a>
+                            </div>
+                        <% } else { %>
+                            <div class="post-collapsed-content">
+                                <button class="expand-btn" data-post-id="<%= index %>">
+                                    <span class="expand-icon">+</span>
+                                </button>
+                            </div>
+                            <div class="post-content hidden" id="post-<%= index %>">
+                                <% if (post.firstImage) { %>
+                                    <img src="<%= post.firstImage %>" alt="Post image" class="post-image">
+                                <% } %>
+                                <div class="post-preview">
+                                    <%= post.preview %>...
+                                </div>
+                                <a href="/blog/post/<%= post.fileName.replace('.md', '') %>" class="read-more">
+                                    Read full article →
+                                </a>
+                            </div>
+                        <% } %>
+                    </article>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

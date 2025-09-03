@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<article class="single-post">
+    <div class="container">
+        <header class="post-header">
+            <a href="/blog" class="back-link">← Back to Posts</a>
+            <h1><%= post.title %></h1>
+            <div class="post-meta">
+                <span class="author"><%= post.author %></span>
+                <span class="date"><%= post.date.toLocaleDateString() %></span>
+                <span class="tag tag-<%= post.tag.toLowerCase() %>"><%= post.tag %></span>
+            </div>
+        </header>
+        
+        <div class="post-body">
+            <%- post.html %>
+        </div>
+    </div>
+</article>
+
+<%- include('../partials/footer') %>
