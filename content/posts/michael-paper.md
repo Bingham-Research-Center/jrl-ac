@@ -7,6 +7,6 @@ MDPI journal Air](https://www.mdpi.com/2813-4168/3/3/22). Michael is barely half
 so this is a great accomplishment. 
 
 
-![Michael accepting a framed publisher certificate of publication](/public/images/michael_certificate_mdpi-air.jpg)
+![Michael accepting a framed publisher certificate of publication](/images/michael_certificate_mdpi-air.jpg)
 
 Keep your eyes peeled for a plain-language summary of his work and what it might mean for real-world applications.
