@@ -2,7 +2,7 @@
 ## Research Assistant: [Google Scholar](https://scholar.google.com/citations?user=)
 
 
-I am Luke Neilson, a student at Uintah High School that works part-time as a high school student researcher at Bingham Research Center. I have a good amount of experience working with programming languages like HTML, CSS, and JavaScript. I am good at math and has taken an AP Precalculus class, scoring fairly high on the AP test. I was planning on pursuing a career in website or software development which has drawn me to join the Bingham Research Center, specifically on the programming side of the center.
+I am Luke Neilson, a student at Uintah High School, and I work part-time as a high school student researcher at Bingham Research Center. I have a good amount of experience working with programming languages like HTML, CSS, and JavaScript. I am good at math and have taken an AP Precalculus class, scoring fairly high on the AP test. I plan to pursue a career in website or software development, which drew me to join the Bingham Research Center, specifically on the programming side of the center.
 
 Currently, I am developing this site, the JRL academic site. I'm also contributing bits and pieces to basinwx.com, mostly focusing on the water weather page of the site.
 
